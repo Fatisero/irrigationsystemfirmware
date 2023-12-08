@@ -14,7 +14,7 @@ int SoilMoistureSensor::getValueSoilMoisture()
   
 	int adcVal = analogRead(this->SensorADCPin) ;
 	
-  return adcVal ;
+  //return adcVal ;
 
 	if((adcVal >= ADC_VAL_SENSOR_IN_OPEN_AIR_MIN) && (adcVal <= (ADC_VAL_SENSOR_IN_OPEN_AIR_MAX) ))
 	{
@@ -26,10 +26,10 @@ int SoilMoistureSensor::getValueSoilMoisture()
 	}
 	
   //remove next comment 
-	/*else if( (adcVal >= ADC_VAL_SENSOR_IN_SOIL_MIN) && (adcVal <= ADC_VAL_SENSOR_IN_SOIL_MAX) )
+	else if( (adcVal >= ADC_VAL_SENSOR_IN_SOIL_MIN) && (adcVal <= ADC_VAL_SENSOR_IN_SOIL_MAX) )
 	{
 		ret = (int) map(adcVal, ADC_VAL_SENSOR_IN_SOIL_MIN, ADC_VAL_SENSOR_IN_SOIL_MAX, 0, 100) ;
-	}*/
+	}
 
   return ret ;
 	

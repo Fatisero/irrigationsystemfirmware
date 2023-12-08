@@ -1,6 +1,6 @@
 
 #include "Arduino.h"
-
+// Define ADC threshold values for different conditions
 #define ADC_VAL_SENSOR_IN_OPEN_AIR_MIN      120
 #define ADC_VAL_SENSOR_IN_OPEN_AIR_MAX      200
 #define ADC_VAL_SENSOR_SHORT_CIRCUIT        3000
@@ -10,16 +10,16 @@
 class SoilMoistureSensor {
 	
   public :
-	//constructor 
+    // Constructor: Initializes the SoilMoistureSensor object with the specified ADC pin.
 	SoilMoistureSensor (int adcPin); 
 	
-	
-	//methods
+    // Method to get the soil moisture value
 	int getValueSoilMoisture();
 	
 	private :
-	//propriet~s
-	
+
+    // Property to store the ADC pin connected to the sensor
 	int SensorADCPin ;
 
 } ;
+
